@@ -13,17 +13,143 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-
+    <!-- tailwind custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'box-red': '#FF4240',
+                        'banner-bg': '#131318',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- custom styles -->
     <style>
         .font-manrope {
             font-family: 'Manrope', sans-serif;
+        }
+
+        .font-red {
+            color: #FF4240;
+        }
+
+        /* ring styles */
+        .ui-widget-1 {
+            position: relative;
+            /* display: inline-block; */
+            width: 10rem;
+            height: 10rem;
+            border-radius: 9rem;
+            /* margin: 1.5rem; */
+            border: 1.2rem solid rgb(155, 2, 2);
+            /* box-shadow: inset 0 0 7px grey; */
+            border-left-color: rgb(165, 0, 0);
+            border-top-color: rgb(179, 42, 42);
+            border-right-color: rgb(238, 113, 113);
+            border-bottom-color: white;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .data-1 {
+            top: 30px;
+            position: absolute;
+            left: 10px;
+            right: 0;
+            font-weight: 700;
+            font-size: 2.0rem;
+        }
+
+        .ui-widget-2 {
+            position: relative;
+            /* display: inline-block; */
+            width: 10rem;
+            height: 10rem;
+            border-radius: 9rem;
+            /* margin: 1.5rem; */
+            border: 1.2rem solid rgb(3, 62, 255);
+            /* box-shadow: inset 0 0 7px grey; */
+            /* border-left-color: rgb(165, 0, 0);
+            border-top-color: rgb(179, 42, 42);
+            border-right-color: rgb(238, 113, 113); */
+            border-bottom-color: white;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .data-2 {
+            top: 30px;
+            position: absolute;
+            left: 10px;
+            right: 0;
+            font-weight: 700;
+            font-size: 2.0rem;
+        }
+
+        .ui-widget-3 {
+             position: relative;
+            /* display: inline-block; */
+            width: 10rem;
+            height: 10rem;
+            border-radius: 9rem;
+            /* margin: 1.5rem; */
+            border: 1.2rem solid rgb(247, 203, 8);
+            /* box-shadow: inset 0 0 7px grey; */
+            /* border-left-color: rgb(165, 0, 0);
+            border-top-color: rgb(179, 42, 42);
+            border-right-color: rgb(238, 113, 113); */
+            border-bottom-color: white;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .data-3 {
+
+            top: 30px;
+            position: absolute;
+            left: 10px;
+            right: 0;
+            font-weight: 700;
+            font-size: 2.0rem;
+        }
+
+        .ui-widget-4 {
+
+            position: relative;
+            /* display: inline-block; */
+            width: 10rem;
+            height: 10rem;
+            border-radius: 9rem;
+            /* margin: 1.5rem; */
+            border: 1.2rem solid rgb(2, 155, 15);
+            box-shadow: inset 0 0 7px grey;
+            /* border-left-color: rgb(165, 0, 0);
+            border-top-color: rgb(179, 42, 42);
+            border-right-color: rgb(238, 113, 113); */
+            border-bottom-color: white;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .data-4 {
+
+            top: 30px;
+            position: absolute;
+            left: 10px;
+            right: 0;
+            font-weight: 700;
+            font-size: 2.0rem;
         }
     </style>
 
 </head>
 
 <body class=".font-manrope">
-    <header>
+    <header class="lg:container lg:mx-auto sm:container sm:mx-auto">
         <!-- navigation section -->
         <nav>
             <div class="navbar bg-base-100">
@@ -37,19 +163,19 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
+                            class="menu text-base text-stone-200 menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a class="font-red">Home</a></li>
                             <li><a>About</a></li>
                             <li><a>Pages</a></li>
                             <li><a>Blog</a></li>
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">Real Madrid</a>
+                    <a class="btn btn-ghost text-stone-200 text-3xl"><span class="font-red">Real</span> Madrid</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
+                    <ul class="menu text-base text-stone-200 menu-horizontal px-1">
+                        <li><a class="font-red">Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Pages</a></li>
                         <li><a>Blog</a></li>
@@ -57,12 +183,90 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn btn-error">Get Tickets</a>
+                    <a class="btn btn-error text-white">Get Tickets</a>
                 </div>
             </div>
         </nav>
+        <!-- banner using carousel -->
+        <section>
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/madrid.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
-    <main></main>
+    <main class="md:container md:mx-auto">
+        <section class="mt-24">
+            <div class="text-center">
+                <h3 class="font-extrabold">Professional Hockey Club</h3>
+                <p class="font-normal">Our Team is filled with young talents and old bones with great experiences.</p>
+            </div>
+            <div>
+                <div class="sm:grid lg:grid grid-cols-4">
+                    <!-- no1 -->
+                        <div class="card">
+                            <figure class="px-10 pt-10">
+                                <div class="ui-widget-1">
+                                    <p class="data-1">88%</p>
+                                </div>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title">Shoes!</h2>
+                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                            </div>
+                        </div>
+                    <!-- no2 -->
+                        <div class="card">
+                            <figure class="px-10 pt-10">
+                                <div class="ui-widget-2">
+                                    <p class="data-2">89%</p>
+                                </div>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title">Shoes!</h2>
+                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                            </div>
+                        </div>
+                    <!-- no3 -->
+                        <div class="card">
+                            <figure class="px-10 pt-10">
+                                <div class="ui-widget-3">
+                                    <p class="data-3">87%</p>
+                                </div>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title">Shoes!</h2>
+                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                            </div>
+                        </div>
+                    <!-- no4 -->
+                    <div class="card">
+                        <figure class="px-10 pt-10">
+                            <div class="ui-widget-4">
+                                <p class="data-4">89%</p>
+                            </div>
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 
